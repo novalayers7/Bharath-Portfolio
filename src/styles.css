@@ -324,15 +324,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .education-qualifications { display: grid; gap: 8px; margin-top: 16px; }
 .education-qualifications li { padding: 10px 14px; border-left: 2px solid var(--rust); background: rgba(255,255,255,.22); font-size: 13px; }
 .serhii.section[aria-labelledby="sk-h"] .s-title { text-align: center; }
-.instagram-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(28px, 6vw, 90px); align-items: center; }
-.instagram-preview { aspect-ratio: 1 / 0.78; padding: 24px; border: 1px dashed rgba(58, 58, 56, 0.7); background: linear-gradient(135deg, rgba(255,255,255,.35), rgba(138,149,119,.12)); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; }
-.instagram-preview svg { width: 42px; height: 42px; }
-.instagram-preview span { font: 700 18px/1.15 var(--f-serhii); text-transform: uppercase; }
-.instagram-preview small { font-size: 11px; opacity: 0.7; }
+.instagram-layout { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.instagram-preview { width: 100%; max-width: 480px; margin: 0; padding: 0; aspect-ratio: auto; overflow: hidden; border: 1px solid rgba(58, 58, 56, 0.35); border-radius: 8px; background: transparent; box-shadow: 0 12px 30px rgba(58, 58, 56, 0.08); }
+.instagram-preview img { display: block; width: 100%; height: auto; }
 .instagram-copy { display: grid; justify-items: start; gap: 24px; }
 .instagram-copy .s-title { font-size: clamp(42px, 7vw, 90px); }
 .instagram-copy > p:not(.eyebrow) { max-width: 46ch; font-size: 14px; }
-@media (max-width: 800px) { .instagram-layout { grid-template-columns: 1fr; } .instagram-preview { max-width: 620px; width: 100%; } }
+@media (max-width: 800px) { .instagram-layout { grid-template-columns: 1fr; } .instagram-preview { max-width: 520px; width: 100%; margin-inline: auto; } }
 .services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px clamp(16px, 2.4vw, 36px); margin-top: clamp(36px, 5vw, 64px); }
 .services > div { border-top: 1px solid var(--char); padding-top: 14px; }
 @media (max-width: 1000px) { .steps, .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); } .services { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

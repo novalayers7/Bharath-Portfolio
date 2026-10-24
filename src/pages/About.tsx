@@ -105,11 +105,9 @@ export default function About() {
         <WhyWork cardLayout />
         <section className="serhii section instagram-showcase" aria-labelledby="instagram-h">
           <div className="frame-pad instagram-layout">
-            <div className="instagram-preview" aria-label="Replaceable Instagram profile image placeholder">
-              <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="5" width="38" height="38" rx="11" fill="none" stroke="currentColor" strokeWidth="2.5"/><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" strokeWidth="2.5"/><circle cx="35.5" cy="12.5" r="2" fill="currentColor"/></svg>
-              <span>Instagram profile image</span>
-              <small>Replace with a profile screenshot</small>
-            </div>
+            <figure className="instagram-preview">
+              <img src="/img/instagram-dashbaord.jpeg" alt="Instagram profile and creator dashboard screenshot for Bharath Kumar C" loading="lazy" decoding="async" />
+            </figure>
             <div className="instagram-copy" data-fade>
               <p className="eyebrow">A little more beyond the work</p>
               <h2 id="instagram-h" className="s-title"><span className="s-line">LET'S CONNECT</span><span className="s-line outline">ON INSTAGRAM</span></h2>
