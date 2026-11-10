@@ -106,6 +106,20 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "tharunima",
+    title: "Tharunima",
+    category: "E-commerce website",
+    url: "https://tharunima.in",
+    role: "Website project",
+    summary:
+      "An online storefront for Tharunima featuring women's clothing collections.",
+    contributions: [],
+    tech: [],
+    images: ["/img/works/tharunima.png", "/img/works/tharunima%201.png", "/img/works/tharunima2.png", "/img/works/tharunima3.png", "/img/works/tharunima4.png", "/img/works/tharunima5.png", "/img/works/tharunima6.png", "/img/works/tharunima7.png", "/img/works/tharunima8.png"],
+    imageRatios: ["1911 / 948", "1918 / 949", "1918 / 949", "1918 / 1023", "1918 / 951", "1918 / 949", "1918 / 952", "1918 / 951", "1918 / 952"],
+    tone: "rust",
+  },
+  {
     slug: "sheraera",
     title: "Sheraera",
     category: "Shopify e-commerce",

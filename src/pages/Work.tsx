@@ -7,6 +7,7 @@ import { ProjectCard, ConnectCTA } from "../components/Sections";
 // Asymmetric editorial rhythm: each entry sets the grid span and image ratio for that project.
 const rhythm: { cls: string; ratio: string }[] = [
   { cls: "g-wide", ratio: "16 / 9" },
+  { cls: "g-wide", ratio: "16 / 9" },
   { cls: "g-narrow", ratio: "4 / 5" },
   { cls: "g-narrow", ratio: "4 / 5" },
   { cls: "g-wide", ratio: "16 / 9" },

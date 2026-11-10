@@ -62,6 +62,46 @@ export default function Home() {
         card.classList.remove("pinned");
       };
     });
+
+    // Mobile uses the same pinned, three-step scroll progression. The stage copy
+    // and its in-flow image transition together so touch scrolling controls the
+    // sequence without adding per-element scroll listeners.
+    mm.add("(max-width: 899px)", () => {
+      const section = root.querySelector<HTMLElement>(".ddd");
+      const card = dddCard.current;
+      if (!section || !card) return;
+      const texts = gsap.utils.toArray<HTMLElement>(".ddd-text", card);
+      card.classList.add("pinned", "mobile-pinned");
+      let current = -1;
+      const set = (index: number) => {
+        const stage = Math.min(2, Math.max(0, index));
+        if (stage === current) return;
+        current = stage;
+        texts.forEach((text, i) => {
+          const active = i === stage;
+          text.classList.toggle("active", active);
+          text.setAttribute("aria-hidden", String(!active));
+        });
+      };
+      set(0);
+
+      const st = ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        end: "+=230%",
+        pin: section.querySelector(".ddd-pin"),
+        pinSpacing: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        onUpdate: (self) => set(Math.floor(self.progress * 3)),
+        onRefresh: (self) => set(Math.floor(self.progress * 3)),
+      });
+      return () => {
+        st.kill();
+        texts.forEach((text) => text.removeAttribute("aria-hidden"));
+        card.classList.remove("pinned", "mobile-pinned");
+      };
+    });
   });
 
   return (

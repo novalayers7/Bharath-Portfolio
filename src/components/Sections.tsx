@@ -142,6 +142,7 @@ export function ProjectCard({ p, ratio = "4 / 3", index, imageSrc }: { p: Projec
 export function SelectedWorks() {
   const featured = projects.slice(0, 4);
   const images: Record<string, { src: string; ratio: string }> = {
+    tharunima: { src: "/img/works/tharunima.png", ratio: "1911 / 948" },
     sheraera: { src: "/img/works/shera%20homepage.png", ratio: "1896 / 949" },
     "elysian-aether": { src: "/img/works/elysianaether%20homepage.png", ratio: "1896 / 949" },
     "70mm-teez-studio": { src: "/img/works/70mmteez%20homepage.png", ratio: "1903 / 934" },

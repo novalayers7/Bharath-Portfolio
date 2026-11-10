@@ -175,6 +175,17 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .ddd-stage-image { display: block; width: min(100%, 400px); aspect-ratio: 3 / 4; margin: 20px auto 0; border-radius: 12px; object-fit: cover; object-position: center 50%; }
   .ddd-right { display: none; }
 }
+.ddd-card.mobile-pinned .ddd-texts { display: grid; gap: 0; }
+.ddd-card.mobile-pinned .ddd-text { grid-area: 1 / 1; transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
+.ddd-card.mobile-pinned .ddd-text[aria-hidden="true"] { visibility: hidden; transition: opacity 0.6s var(--ease), transform 0.6s var(--ease), visibility 0s linear 0.6s; }
+.ddd-card.mobile-pinned .ddd-stage-image { clip-path: inset(100% 0 0 0); transform: scale(1.04); transition: clip-path 1s var(--ease), transform 1.4s var(--ease); }
+.ddd-card.mobile-pinned .ddd-text.active .ddd-stage-image { clip-path: inset(0); transform: scale(1); }
+@media (max-width: 899px) {
+  .ddd-pin { min-height: 100svh; padding-block: clamp(20px, 5svh, 48px); }
+  .ddd-card.mobile-pinned { width: min(100%, 640px); }
+  .ddd-card.mobile-pinned .ddd-left { padding: clamp(18px, 5vw, 30px); }
+  .ddd-card.mobile-pinned .ddd-stage-image { width: min(100%, 400px, calc((100svh - 320px) * 0.75)); }
+}
 @media (min-width: 900px) and (prefers-reduced-motion: reduce) { .ddd-pin { padding-block: 60px; } }
 
 /* ===== SERHII system ===== */
