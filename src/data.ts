@@ -101,6 +101,8 @@ export type Project = {
   images: string[];
   /** Source image ratios keep each screenshot uncropped in its display area. */
   imageRatios?: string[];
+  /** Show the project summary in its preview card when requested. */
+  showSummary?: boolean;
   tone: "ink" | "rust" | "sage" | "paper";
 };
 
@@ -108,13 +110,24 @@ export const projects: Project[] = [
   {
     slug: "tharunima",
     title: "Tharunima",
-    category: "E-commerce website",
+    category: "Shopify e-commerce development",
     url: "https://tharunima.in",
-    role: "Website project",
+    role: "End-to-end Shopify development and store setup",
     summary:
-      "An online storefront for Tharunima featuring women's clothing collections.",
-    contributions: [],
-    tech: [],
+      "A complete custom Shopify e-commerce website developed from scratch, with a fully customized Shopify theme and end-to-end store setup.",
+    highlight:
+      "Independently built the custom Shopify theme from scratch and completed the full store setup, including domain and DNS configuration and Razorpay account and payment integration.",
+    contributions: [
+      "Built a fully custom Shopify theme from scratch.",
+      "Developed custom layouts and functionality using Liquid, HTML, CSS, and JavaScript.",
+      "Designed and developed the complete e-commerce website.",
+      "Purchased and configured the custom domain and connected it through DNS configuration.",
+      "Created and completed the Razorpay account setup.",
+      "Integrated and configured the Razorpay payment gateway with Shopify.",
+      "Handled the complete payment integration setup and testing.",
+    ],
+    tech: ["Shopify", "Liquid", "HTML5", "CSS3", "JavaScript"],
+    showSummary: true,
     images: ["/img/works/tharunima.png", "/img/works/tharunima%201.png", "/img/works/tharunima2.png", "/img/works/tharunima3.png", "/img/works/tharunima4.png", "/img/works/tharunima5.png", "/img/works/tharunima6.png", "/img/works/tharunima7.png", "/img/works/tharunima8.png"],
     imageRatios: ["1911 / 948", "1918 / 949", "1918 / 949", "1918 / 1023", "1918 / 951", "1918 / 949", "1918 / 952", "1918 / 951", "1918 / 952"],
     tone: "rust",

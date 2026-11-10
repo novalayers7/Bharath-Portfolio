@@ -131,6 +131,7 @@ export function ProjectCard({ p, ratio = "4 / 3", index, imageSrc }: { p: Projec
         <div className="pills">{p.tech.slice(0, 2).map((t) => <span key={t}>{t}</span>)}</div>
       </div>
       <p className="pcard-cat">{index !== undefined ? `${String(index + 1).padStart(2, "0")} — ` : ""}{p.category}</p>
+      {p.showSummary && <p className="pcard-desc">{p.summary}</p>}
       <div className="pcard-img" data-clip>
         <div className="pcard-inner"><ProjectVisual project={visualProject} ratio={ratio} /></div>
         <span className="pcard-view" aria-hidden="true">VIEW<br />PROJECT ↗</span>

@@ -259,6 +259,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .pills { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }
 .pills span { border: 1px solid var(--char); border-radius: 99px; padding: 2px 9px; font-size: 9px; letter-spacing: 0.04em; white-space: nowrap; }
 .pcard-cat { font-size: 11px; margin: 6px 0 14px; opacity: 0.8; }
+.pcard-desc { font-size: 12px; line-height: 1.55; margin: -4px 0 14px; max-width: 68ch; }
 .pcard-img { position: relative; overflow: hidden; }
 .pcard-inner { transition: transform 1s var(--ease); }
 .pcard:hover .pcard-inner { transform: scale(1.05); }
